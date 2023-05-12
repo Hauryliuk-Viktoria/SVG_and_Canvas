@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <section class="tool-board">
+            <div class="row">
+                <label for="" class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option tool active" id="rectangle">
+                        <svg width="30" height="25" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="10" height="10" margin="0" x="5" y="9" />
+                        </svg>
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <svg width="30" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="9" r="6" margin="0" />
+                        </svg>
+                        <span>Circle</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color">
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" min="1" max="20" value="10">
+                    </li>
+                </ul>
+                <div class="row colors">
+                    <label for="" class="title">Colors</label>
+                    <ul class="options">
+                        <li class="option"></li>
+                        <li class="option selected"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option"> <input type="color" id="color-picker" value="#4A98F7"></li>
+                    </ul>
+                </div>
+                <div class="row border-colors">
+                    <label for="" class="title">Border Colors</label>
+                    <ul class="border-options">
+                        <li class="border-option"></li>
+                        <li class="border-option selected"></li>
+                        <li class="border-option"></li>
+                        <li class="border-option"></li>
+                        <li class="border-option"> <input type="color" id="border-color-picker" value="#4A98F7"></li>
+                    </ul>
+                </div>
+                <div class="row buttons">
+                    <button id="clear" class="clear-canvas">Clear</button>
+                </div>
+                <div class="row layers ">
+                    <li class="option ">
+                        <input type="checkbox" id="svg-layer">
+                        <label for="svg-layer">SVG</label>
+                    </li>
+                    <li class="option ">
+                        <input type="checkbox" id="canvas-layer">
+                        <label for="canvas-layer">Canvas</label>
+                    </li>
+                </div>
+        </section>
+        <section class="drawing-board">
+            <canvas id="canvas">
+            </canvas>
+            <svg id="svg" width="100%" height="100%">
+            </svg>
+        </section>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
